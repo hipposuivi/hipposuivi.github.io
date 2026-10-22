@@ -1,0 +1,59 @@
+/* Hipposuivi – palette douce (mêmes tons que l'application) */
+:root {
+  --fond: #EAE4D8;
+  --carte: #F6F2EA;
+  --vert: #44704F;
+  --vert-doux: #DFE7D8;
+  --texte: #3B3833;
+  --texte-2: #6A645A;
+  --bord: #D9D0C0;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background: var(--fond);
+  color: var(--texte);
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+.page { max-width: 820px; margin: 0 auto; padding: 24px 16px 48px; }
+
+header.bandeau {
+  background: var(--vert);
+  color: #FBF8F2;
+  border-radius: 16px;
+  padding: 28px 24px;
+  margin-bottom: 20px;
+}
+header.bandeau h1 { margin: 0 0 6px; font-size: 2rem; }
+header.bandeau p { margin: 0; opacity: .92; }
+
+nav { margin: 0 0 20px; display: flex; gap: 16px; flex-wrap: wrap; }
+nav a { color: var(--vert); font-weight: 600; text-decoration: none; }
+nav a:hover { text-decoration: underline; }
+
+.carte {
+  background: var(--carte);
+  border: 1px solid var(--bord);
+  border-radius: 14px;
+  padding: 18px 22px;
+  margin-bottom: 16px;
+}
+.carte h2 { margin: 0 0 8px; color: var(--vert); font-size: 1.25rem; }
+.carte h3 { margin: 14px 0 4px; font-size: 1.05rem; }
+.carte p, .carte ul { margin: 6px 0; }
+.carte ul { padding-left: 22px; }
+
+.important { background: var(--vert-doux); border-color: #B9CBB0; }
+
+.grille { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; }
+.grille .carte { margin: 0; }
+
+a { color: var(--vert); }
+.petit { color: var(--texte-2); font-size: .9rem; }
+
+footer { margin-top: 28px; text-align: center; color: var(--texte-2); font-size: .9rem; }
